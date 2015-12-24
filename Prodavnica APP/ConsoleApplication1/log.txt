@@ -1,0 +1,22 @@
+22:15:55  NED 13.12.2015.g.               ---LOGIN---                   100000                        a                        a
+22:15:55  NED 13.12.2015.g.               glavni_meni                   100000                        a                        a
+22:15:55  NED 13.12.2015.g.                admin_meni                   100000                        a                        a
+22:15:56  NED 13.12.2015.g.                statistika                   100000                        a                        a
+22:15:57  NED 13.12.2015.g.                aktivnosti                   100000                        a                        a
+22:15:58  NED 13.12.2015.g.               glavni_meni                   100000                        a                        a
+22:15:58  NED 13.12.2015.g.                admin_meni                   100000                        a                        a
+22:16:00  NED 13.12.2015.g.                statistika                   100000                        a                        a
+22:16:01  NED 13.12.2015.g.                aktivnosti                   100000                        a                        a
+22:16:03  NED 13.12.2015.g.              ---LOGOUT---                   100000                        a                        a
+22:16:04  NED 13.12.2015.g.               ---LOGIN---                   200000                        t                        t
+22:16:04  NED 13.12.2015.g.               glavni_meni                   200000                        t                        t
+22:16:04  NED 13.12.2015.g.              trgovac_meni                   200000                        t                        t
+22:16:05  NED 13.12.2015.g.   upravljanje_proizvodima                   200000                        t                        t
+22:16:07  NED 13.12.2015.g.                   pregled                   200000                        t                        t
+22:16:08  NED 13.12.2015.g.              ---LOGOUT---                   200000                        t                        t
+19:09:52 24.12.2015.g.               ---LOGIN---                   000001                   Nikola                   Karpic
+19:09:52 24.12.2015.g.               glavni_meni                   000001                   Nikola                   Karpic
+19:09:52 24.12.2015.g.                admin_meni                   000001                   Nikola                   Karpic
+19:09:54 24.12.2015.g.                statistika                   000001                   Nikola                   Karpic
+19:09:56 24.12.2015.g.                aktivnosti                   000001                   Nikola                   Karpic
+19:10:00 24.12.2015.g.              ---LOGOUT---                   000001                   Nikola                   Karpic
