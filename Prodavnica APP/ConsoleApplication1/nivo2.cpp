@@ -2,7 +2,7 @@
 #include "funkcije.h"
 /************************************************************************************************/
 //DRUGI NIVO
-void statistika_admin(std::ostream &out, korisnik k)
+void statistika_admin(std::ostream &out, Korisnik k)
 {
     log(k,"statistika");
     print_meni("Statistika","aktivnosti","dummy1","dummy2");
@@ -14,7 +14,7 @@ void statistika_admin(std::ostream &out, korisnik k)
         if(pom=="aktivnosti"||pom=="akt"||pom=="a")aktivnosti_statistika_admin(out,k);
     }while(pom!="aktivnosti"&&pom!="akt"&&pom!="a");
 }
-void nalozi_admin(std::ostream &out, korisnik k)
+void nalozi_admin(std::ostream &out, Korisnik k)
 {
     log(k,"nalozi");
     print_meni("Nalozi","pregledaj","dodaj","brisi","izmjeni");
@@ -31,7 +31,7 @@ void nalozi_admin(std::ostream &out, korisnik k)
     }while(pom!="pregledaj"&&pom!="pregl"&&pom!="p"&&pom!="dodaj"&&pom!="dod"&&pom!="d"&&
            pom!="brisi"&&pom!="br"&&pom!="b"&&pom!="izmjeni"&&pom!="izm"&&pom!="i");
 }
-void definisanje_parametara_admin(std::ostream &out, korisnik k)
+void definisanje_parametara_admin(std::ostream &out, Korisnik k)
 {
     log(k,"definisanje_parametara");
     print_meni("Definisanje parametara","lokacija baze podataka","dummy1","dummy2");
@@ -45,9 +45,10 @@ void definisanje_parametara_admin(std::ostream &out, korisnik k)
     }while(pom!="lokacija_baze_podataka"&&pom!="lokacija_bp"&&pom!="lokbp"&&pom!="lbp"&&pom!="l");
 }
 
-void upravljanje_proizvodima_trgovac(std::ostream &out, korisnik k)
+void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
 {
-    log(k,"upravljanje_proizvodima");
+    //log(k,"upravljanje_proizvodima");
+	log(k, "upravlj_proizv");
     print_meni("Proizvodi","pregledaj","dodaj","brisi","izmjeni");
     std::string pom;
     do
@@ -62,7 +63,7 @@ void upravljanje_proizvodima_trgovac(std::ostream &out, korisnik k)
     }while(pom!="pregledaj"&&pom!="pregl"&&pom!="p"&&pom!="dodaj"&&pom!="dod"&&pom!="d"&&
            pom!="brisi"&&pom!="br"&&pom!="b"&&pom!="izmjeni"&&pom!="izm"&&pom!="i");
 }
-void prodaja_trgovac(std::ostream &out, korisnik k)
+void prodaja_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"prodaja");
     print_meni("Prodaja","racun","dummy1","dummy2");
@@ -74,7 +75,7 @@ void prodaja_trgovac(std::ostream &out, korisnik k)
         if(pom=="racun"||pom=="rac"||pom=="r")racun_prodaja_trgovac(out,k);
     }while(pom!="racun"&&pom!="rac"&&pom!="r");
 }
-void kupci_trgovac(std::ostream &out, korisnik k)
+void kupci_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"kupci");
     print_meni("Kupci","pregledaj","dodaj","brisi","izmjeni");
@@ -91,7 +92,7 @@ void kupci_trgovac(std::ostream &out, korisnik k)
     }while(pom!="pregledaj"&&pom!="pregl"&&pom!="p"&&pom!="dodaj"&&pom!="dod"&&pom!="d"&&
            pom!="brisi"&&pom!="br"&&pom!="b"&&pom!="izmjeni"&&pom!="izm"&&pom!="i");
 }
-void izvjestaji_trgovac(std::ostream &out, korisnik k)
+void izvjestaji_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"izvjestaji");
     print_meni("Izvjestaji","svi proizvodi","jedan proizvod","svi_kupci");
@@ -109,15 +110,14 @@ void izvjestaji_trgovac(std::ostream &out, korisnik k)
            pom!="svi_kupci"&&pom!="skup"&&pom!="kp"&&
            pom!="kupci"&&pom!="kup"&&pom!="k");
 }
-
-void pregled_proizvoda_kupac(std::ostream &out, korisnik k)
+void pregled_proizvoda_kupac(std::ostream &out, Korisnik k)
 {
     log(k,"pregled_svih_proizvoda");
     trenutno_jedan_proizvodi_izvjestaj_trgovac(out,k);
 }
-
-void jedan_proizvod_kupac(std::ostream &out, korisnik k)
+void jedan_proizvod_kupac(std::ostream &out, Korisnik k)
 {
     log(k,"pregled_jednog_proizvoda");
     trenutno_svi_proizvodi_izvjestaj_trgovac(out,k);
 }
+/************************************************************************************************/

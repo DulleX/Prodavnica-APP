@@ -2,21 +2,6 @@
 #include "funkcije.h"
 #pragma warning(disable : 4996);
 /************************************************************************************************/
-/**METODE KLASE I PRIJATELJSKE FUNKCIJE**/
-std::istream &operator>>(std::istream &in, korisnik &k)
-{
-    in>>k.sifra>>k.ime>>k.prezime>>k.korisnicko_ime>>k.lozinka>>k.zaduzenje;
-    return in;
-}
-std::ostream &operator<<(std::ostream &out, const korisnik &k)
-{
-    int w=7;
-    out<<"|"<<std::setw(w)<<k.sifra<<"|"<<std::setw(w)<<k.ime<<"|"<<std::setw(w)<<k.prezime<<"|"
-    <<std::setw(w)<<k.korisnicko_ime<<"|"<<std::setw(w)<<k.lozinka<<"|"<<std::setw(w)<<k.zaduzenje<<"|"<<std::endl;
-    return out;
-}
-
-/************************************************************************************************/
 /**OSNOVNE FUNKCIJE**/
 void print_line()
 {
@@ -74,7 +59,7 @@ void ispisi_vrijeme(std::ostream &out) //ova funkcija je malo teza za shvatiti p
     out<<s[20]<<s[21]<<s[22]<<s[23]<<".g.";//datum
 }
 
-void log(korisnik k, std::string s)
+void log(Korisnik k, std::string s)
 {
     std::ofstream out("log.txt",std::ofstream::app);
     ispisi_vrijeme(out);
@@ -125,3 +110,4 @@ void print_pitanje(std::string pitanje, std::string odgovor1, std::string odgovo
 {
     std::cout<<pitanje<<"? "<<"("<<odgovor1<<","<<odgovor2<<","<<odgovor3<<","<<odgovor4<<","<<odgovor5<<")"<<":"<<std::endl;
 }
+/************************************************************************************************/

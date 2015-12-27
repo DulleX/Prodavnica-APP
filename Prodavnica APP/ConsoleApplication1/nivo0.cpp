@@ -2,10 +2,9 @@
 #include "funkcije.h"
 /************************************************************************************************/
 //NULTI NIVO
-
 void program(std::string rep)
 {
-    korisnik k;
+    Korisnik k;
     ispisi_vrijeme(std::cout);
     std::cout<<std::endl;
     print_meni("Prodavnica APP"," korisnicko ime = GOST "," lozinka = GOST ");
@@ -54,8 +53,7 @@ void program(std::string rep)
             else std::cout<<"GERSKA U UNOSU!!!"<<std::endl;
     }while(pom!="kraj"&&pom!="k");
 }
-
-korisnik login(std::string rep)
+Korisnik login(std::string rep)
 {
 	std::ifstream in(rep, std::ifstream::in);
     std::string korisnicko_ime;
@@ -65,7 +63,7 @@ korisnik login(std::string rep)
     std::cout<<"Lozinka: ";
     std::cin>>lozinka;
 
-    korisnik k;
+    Korisnik k;
     while(in.good())
     {
         in>>k;
@@ -79,8 +77,7 @@ korisnik login(std::string rep)
     in.close();
     return k;
 }
-
-void glavni_meni(std::ostream& out, korisnik k)
+void glavni_meni(std::ostream& out, Korisnik k)
 {
     log(k,"glavni_meni");
     if(k.get_zaduzenje()=="admin")admin_meni(out,k);
@@ -88,3 +85,4 @@ void glavni_meni(std::ostream& out, korisnik k)
     else if(k.get_zaduzenje()=="kupac")kupac_meni(out,k);
     else std::cout<<"GERSKA U BAZI PODATAKA!!!"<<std::endl;
 }
+/************************************************************************************************/

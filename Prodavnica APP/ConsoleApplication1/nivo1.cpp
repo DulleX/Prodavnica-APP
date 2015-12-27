@@ -2,7 +2,7 @@
 #include "funkcije.h"
 /************************************************************************************************/
 //PRVI NIVO
-void admin_meni(std::ostream &out, korisnik k)
+void admin_meni(std::ostream &out, Korisnik k)
 {
     log(k,"admin_meni");
     print_meni("Admin meni","statistika","nalozi","definisanje_parametara");
@@ -18,7 +18,7 @@ void admin_meni(std::ostream &out, korisnik k)
     }while(pom!="statistika"&&pom!="stat"&&pom!="s"&&pom!="nalozi"&&pom!="n"&&pom!="definisanje_parametara"&&
            pom!="defparam"&&pom!="dp"&&pom!="d");
 }
-void trgovac_meni(std::ostream &out, korisnik k)
+void trgovac_meni(std::ostream &out, Korisnik k)
 {
     log(k,"trgovac_meni");
     print_meni("Trgovac meni","upravljanje proizvodima","prodaja","kupci","izvjestaji");
@@ -35,7 +35,7 @@ void trgovac_meni(std::ostream &out, korisnik k)
     }while(pom!="uravljanje_proizvodima"&&pom!="uprpro"&&pom!="up"&&pom!="u"&&pom!="prodaja"&&pom!="p"&&
            pom!="kupci"&&pom!="k"&&pom!="izvjestaji"&&pom!="izvj"&&pom!="i");
 }
-void kupac_meni(std::ostream &out, korisnik k)
+void kupac_meni(std::ostream &out, Korisnik k)
 {
     log(k,"kupac_meni");
     print_meni("Kupac meni","pregled svih proizvoda","pregled jednog proizvoda");
@@ -49,3 +49,4 @@ void kupac_meni(std::ostream &out, korisnik k)
         else std::cout<<"GRESKA U UNOSU!!!"<<std::endl;
     }while(pom!="pregled_svih_proizvoda"&&pom!="svi"&&pom!="s"&&pom!="pregled_jednog_proizvoda"&&pom!="jedan"&&pom!="j");
 }
+/************************************************************************************************/

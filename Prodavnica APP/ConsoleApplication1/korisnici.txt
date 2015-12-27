@@ -9,4 +9,3 @@
 100000 a a a a admin
 200000 t t t t trgovac
 300000 k k k k kupac
-END
