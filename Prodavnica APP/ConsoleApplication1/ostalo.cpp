@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "funkcije.h"
-#pragma warning(disable : 4996);
+#pragma warning(disable : 4996)
 /************************************************************************************************/
 /**OSNOVNE FUNKCIJE**/
 void print_line()
@@ -66,6 +66,17 @@ void log(Korisnik k, std::string s)
     out<<" "<<std::setw(25)<<s;
     out<<std::setw(25)<<k.get_sifra()<<std::setw(25)<<k.get_ime()<<std::setw(25)<<k.get_prezime()<<std::endl;
     out.close();
+}
+bool isnotnumeric(std::string s)
+{
+	int i = 0;
+	while (s[i])
+	{
+		if (s[i] < '0' || '9' < s[i])
+			return true;
+		++i;
+	}
+	return false;
 }
 /************************************************************************************************/
 /**ISPISI MENI**/

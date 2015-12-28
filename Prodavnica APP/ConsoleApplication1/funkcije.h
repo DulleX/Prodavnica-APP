@@ -7,6 +7,7 @@ void print_line(int sirina_linije);
 void print_naziv_menija(std::string s);
 void ispisi_vrijeme(std::ostream &out); //ova funkcija je malo teza za shvatiti posto koristi time.h biblioteku
 void log(Korisnik k, std::string s);
+bool isnotnumeric(std::string s);
 /************************************************************************************************/
 /**ISPISI MENI**/
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2);

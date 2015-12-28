@@ -12,7 +12,6 @@ void statistika_admin(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="aktivnosti"||pom=="akt"||pom=="a")aktivnosti_statistika_admin(out,k);
     }while(pom!="aktivnosti"&&pom!="akt"&&pom!="a");
@@ -25,7 +24,6 @@ void nalozi_admin(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_naloga_admin(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_naloga_admin(out,k);
@@ -43,7 +41,6 @@ void definisanje_parametara_admin(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="lokacija baze podataka"||pom=="lokacija bp"||pom=="lokbp"||pom=="lbp"||pom=="l")
             lokacija_baze_podataka_definisanje_parametara_admin(out,k);
@@ -53,14 +50,12 @@ void definisanje_parametara_admin(std::ostream &out, Korisnik k)
 
 void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
 {
-    //log(k,"upravljanje_proizvodima");
 	log(k, "upravlj_proizv");
     print_meni("Proizvodi","pregledaj","dodaj","brisi","izmjeni");
     std::string pom;
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_proizvoda_trgovac(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_proizvoda_trgovac(out,k);
@@ -78,7 +73,6 @@ void prodaja_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="racun"||pom=="rac"||pom=="r")racun_prodaja_trgovac(out,k);
 		else std::cout << "GRESKA U UNOSU!!!" << std::endl;
@@ -92,7 +86,6 @@ void kupci_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_kupaca_trgovac(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_kupaca_trgovac(out,k);
@@ -110,7 +103,6 @@ void izvjestaji_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="svi proizvodi"||pom=="spro"||pom=="sp")svi_proizvodi_izvjestaj_trgovac(out,k);
         else if(pom=="jedan proizvod"||pom=="jpro"||pom=="jp")jedan_proizvod_izvjestaj_trgovac(out,k);

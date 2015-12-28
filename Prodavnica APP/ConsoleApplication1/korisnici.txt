@@ -4,8 +4,9 @@
 000003 Jovana Rodic jovana jovana admin
 000004 Aleksandar Roljic aco aco admin
 000005 Predrag Petrovic pedja pedja admin
-100002 Mitar Miric mitar mitar trgovac
+100002 Mitar Miric mitar mitar admin
 200005 Marija Maric marija marija kupac
 100000 a a a a admin
 200000 t t t t trgovac
+300000 k k k k kupac
 300000 k k k k kupac

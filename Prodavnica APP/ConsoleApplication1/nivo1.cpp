@@ -10,7 +10,6 @@ void admin_meni(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="statistika"||pom=="stat"||pom=="s")statistika_admin(out,k);
         else if(pom=="nalozi"||pom=="n")nalozi_admin(out,k);
@@ -27,7 +26,6 @@ void trgovac_meni(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="upravljanje proizvodima"||pom=="uprpro"||pom=="up"||pom=="u")upravljanje_proizvodima_trgovac(out,k);
         else if(pom=="prodaja"||pom=="p")prodaja_trgovac(out,k);
@@ -45,7 +43,6 @@ void kupac_meni(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-		//std::cin>>pom;
 		std::getline(std::cin, pom);
         if(pom=="pregled svih proizvoda"||pom=="svi"||pom=="s")pregled_proizvoda_kupac(out,k);
         else if(pom=="pregled jednog proizvoda"||pom=="jedan"||pom=="j")jedan_proizvod_kupac(out,k);
