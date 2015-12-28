@@ -15,12 +15,12 @@ void print_line(int sirina_linije)
 }
 void print_naziv_menija(std::string s)
 {
-    int sirina_linije=SIRINA_LINIJE;
-    sirina_linije-=s.length();
-    print_line(sirina_linije/2);
-    std::cout<<s;
-    print_line(sirina_linije/2-(sirina_linije%2?0:1));
-    std::cout<<std::endl;
+	int sirina_linije = SIRINA_LINIJE;
+	sirina_linije -= s.length();
+	print_line(sirina_linije / 2);
+	std::cout << s;
+	print_line(sirina_linije / 2 - (sirina_linije % 2 ? 0 : 1));
+	std::cout << std::endl;
 }
 void ispisi_vrijeme(std::ostream &out) //ova funkcija je malo teza za shvatiti posto koristi time.h biblioteku
 {

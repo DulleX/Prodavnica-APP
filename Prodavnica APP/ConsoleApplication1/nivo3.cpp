@@ -25,7 +25,8 @@ void svi_proizvodi_izvjestaj_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="trenutno"||pom=="tren"||pom=="t")trenutno_svi_proizvodi_izvjestaj_trgovac(out,k);
         else if(pom=="sedmicno"||pom=="sedm"||pom=="s")sedmicno_svi_proizvodi_izvjestaj_trgovac(out,k);
         else if(pom=="mjesecno"||pom=="mje"||pom=="m")mjesecno_svi_proizvodi_izvjestaj_trgovac(out,k);
@@ -42,7 +43,8 @@ void jedan_proizvod_izvjestaj_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="trenutno"||pom=="tren"||pom=="t")trenutno_jedan_proizvodi_izvjestaj_trgovac(out,k);
         else if(pom=="sedmicno"||pom=="sedm"||pom=="s")sedmicno_jedan_proizvodi_izvjestaj_trgovac(out,k);
         else if(pom=="mjesecno"||pom=="mje"||pom=="m")mjesecno_jedan_proizvodi_izvjestaj_trgovac(out,k);
@@ -54,14 +56,16 @@ void jedan_proizvod_izvjestaj_trgovac(std::ostream &out, Korisnik k)
 void svi_kupci_izvjestaj_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"svi_kupci");
-    print_meni("Izvjestaji o kupcima","lista_kupaca","dummy1","dummy2");
+    print_meni("Izvjestaji o kupcima","lista kupaca","","");
     std::string pom;
     do
     {
         std::cout<<">";
-        std::cin>>pom;
-        if(pom=="lista_kupaca"||pom=="lk"||pom=="l")lista_kupaca_izvjestaj_trgovac(out,k);
-    }while(pom!="lista_kupaca"&&pom!="lk"&&pom!="l");
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
+        if(pom=="lista kupaca"||pom=="lk"||pom=="l")lista_kupaca_izvjestaj_trgovac(out,k);
+		else std::cout << "GRESKA U UNOSU!!!" << std::endl;
+    }while(pom!="lista kupaca"&&pom!="lk"&&pom!="l");
 }
 /************************************************************************************************/
 void aktivnosti_statistika_admin(std::ostream &out, Korisnik k)
@@ -73,17 +77,19 @@ void aktivnosti_statistika_admin(std::ostream &out, Korisnik k)
 	print_line();
 	std::string s1, s2, s3, s4, s5, s6, s7;
 	s1 = "VRIJEME";
-	s2 = "";
-	s3 = "DATUM      ";
-	s4 = "OPERACIJA";
+	s2 = "DAN";
+	s3 = "DATUM   ";
+	s4 = "OPERACIJA    ";
 	s5 = "SIFRA";
 	s6 = "KORISNICKO IME";
-	std::cout << std::setw(8) << s1 << " " << s2 << std::setw(16) << s3 << std::setw(20) << s4
+	std::cout << "->->" << s2 << std::endl;
+	std::cout << std::setw(8) << s1 << std::setw(4) << s2 << std::setw(13) << s3 << std::setw(20) << s4
 		<< std::setw(7) << s5 << std::setw(15) << s6 << std::endl;
+	print_line();
 	while (in.good())
 	{
 		in >> s1 >> s2 >> s3 >> s4 >> s5 >> s6 >> s7;
-		std::cout << s1 << " " << s2 << s3 << std::setw(20) << s4
+		std::cout << s1 << " " << std::setw(4) << s2 + " " << s3 << std::setw(20) << s4
 			<< std::setw(7) << s5 << std::setw(15) << s6 << std::endl;
 	}
 	print_line();

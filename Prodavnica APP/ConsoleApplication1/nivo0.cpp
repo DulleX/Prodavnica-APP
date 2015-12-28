@@ -17,7 +17,8 @@ void program(std::string rep)
             if(!prvi_puta)
             {
                 print_pitanje("Zadrzati korisnika","da","ne","kraj");
-                std::cin>>pom;
+                //std::cin>>pom;
+				std::getline(std::cin, pom);
             }
             else
             {
@@ -32,9 +33,7 @@ void program(std::string rep)
             else if (pom=="ne"||pom=="n")
             {
                 if(!za_nulti_logout)
-                {
-                    log(k,"---LOGOUT---");
-                }
+					log(k, "--------------LOGOUT");
                 za_nulti_logout=0;
                 do
                 {
@@ -45,11 +44,11 @@ void program(std::string rep)
                         log(k,"nelegalna_prijava");
                     }
                 }while(k.get_sifra()=="-NEMA-");
-                log(k,"---LOGIN---");
+                log(k,"---------------LOGIN");
                 glavni_meni(std::cout,k);
             }
             else if(pom=="kraj"||pom=="k")
-                log(k,"---LOGOUT---");
+                log(k,"--------------LOGOUT");
             else std::cout<<"GERSKA U UNOSU!!!"<<std::endl;
     }while(pom!="kraj"&&pom!="k");
 }
@@ -62,6 +61,7 @@ Korisnik login(std::string rep)
     std::cin>>korisnicko_ime;
     std::cout<<"Lozinka: ";
     std::cin>>lozinka;
+	std::getchar();
 
     Korisnik k;
     while(in.good())

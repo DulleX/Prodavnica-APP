@@ -5,12 +5,15 @@
 void statistika_admin(std::ostream &out, Korisnik k)
 {
     log(k,"statistika");
-    print_meni("Statistika","aktivnosti","dummy1","dummy2");
+
+
+    print_meni("Statistika","aktivnosti","","");
     std::string pom;
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="aktivnosti"||pom=="akt"||pom=="a")aktivnosti_statistika_admin(out,k);
     }while(pom!="aktivnosti"&&pom!="akt"&&pom!="a");
 }
@@ -22,7 +25,8 @@ void nalozi_admin(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_naloga_admin(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_naloga_admin(out,k);
         else if(pom=="brisi"||pom=="br"||pom=="b")brisanje_naloga_admin(out,k);
@@ -33,16 +37,18 @@ void nalozi_admin(std::ostream &out, Korisnik k)
 }
 void definisanje_parametara_admin(std::ostream &out, Korisnik k)
 {
-    log(k,"definisanje_parametara");
-    print_meni("Definisanje parametara","lokacija baze podataka","dummy1","dummy2");
+    log(k,"def_param");
+    print_meni("Definisanje parametara","lokacija baze podataka","","");
     std::string pom;
     do
     {
         std::cout<<">";
-        std::cin>>pom;
-        if(pom=="lokacija_baze_podataka"||pom=="lokacija_bp"||pom=="lokbp"||pom=="lbp"||pom=="l")
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
+        if(pom=="lokacija baze podataka"||pom=="lokacija bp"||pom=="lokbp"||pom=="lbp"||pom=="l")
             lokacija_baze_podataka_definisanje_parametara_admin(out,k);
-    }while(pom!="lokacija_baze_podataka"&&pom!="lokacija_bp"&&pom!="lokbp"&&pom!="lbp"&&pom!="l");
+		else std::cout << "GRESKA U UNOSU!!!" << std::endl;
+    }while(pom!="lokacija baze podataka"&&pom!="lokacija bp"&&pom!="lokbp"&&pom!="lbp"&&pom!="l");
 }
 
 void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
@@ -54,7 +60,8 @@ void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_proizvoda_trgovac(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_proizvoda_trgovac(out,k);
         else if(pom=="brisi"||pom=="br"||pom=="b")brisanje_proizvoda_trgovac(out,k);
@@ -66,13 +73,15 @@ void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
 void prodaja_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"prodaja");
-    print_meni("Prodaja","racun","dummy1","dummy2");
+    print_meni("Prodaja","racun","","");
     std::string pom;
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="racun"||pom=="rac"||pom=="r")racun_prodaja_trgovac(out,k);
+		else std::cout << "GRESKA U UNOSU!!!" << std::endl;
     }while(pom!="racun"&&pom!="rac"&&pom!="r");
 }
 void kupci_trgovac(std::ostream &out, Korisnik k)
@@ -83,7 +92,8 @@ void kupci_trgovac(std::ostream &out, Korisnik k)
     do
     {
         std::cout<<">";
-        std::cin>>pom;
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
         if(pom=="pregledaj"||pom=="pregl"||pom=="p")pregled_kupaca_trgovac(out,k);
         else if(pom=="dodaj"||pom=="dod"||pom=="d")dodavanje_kupaca_trgovac(out,k);
         else if(pom=="brisi"||pom=="br"||pom=="b")brisanje_kupaca_trgovac(out,k);
@@ -95,29 +105,30 @@ void kupci_trgovac(std::ostream &out, Korisnik k)
 void izvjestaji_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"izvjestaji");
-    print_meni("Izvjestaji","svi proizvodi","jedan proizvod","svi_kupci");
+    print_meni("Izvjestaji","svi proizvodi","jedan proizvod","svi kupci");
     std::string pom;
     do
     {
         std::cout<<">";
-        std::cin>>pom;
-        if(pom=="svi_proizvodi"||pom=="spro"||pom=="sp")svi_proizvodi_izvjestaj_trgovac(out,k);
-        else if(pom=="jedan_proizvod"||pom=="jpro"||pom=="jp")jedan_proizvod_izvjestaj_trgovac(out,k);
-        else if(pom=="svi_kupci"||pom=="skup"||pom=="kp"||pom=="kupci"||pom=="kup"||pom=="k")svi_kupci_izvjestaj_trgovac(out,k);
+		//std::cin>>pom;
+		std::getline(std::cin, pom);
+        if(pom=="svi proizvodi"||pom=="spro"||pom=="sp")svi_proizvodi_izvjestaj_trgovac(out,k);
+        else if(pom=="jedan proizvod"||pom=="jpro"||pom=="jp")jedan_proizvod_izvjestaj_trgovac(out,k);
+        else if(pom=="svi kupci"||pom=="skup"||pom=="kp"||pom=="kupci"||pom=="kup"||pom=="k")svi_kupci_izvjestaj_trgovac(out,k);
         else std::cout<<"GRESKA U UNOSU!!!"<<std::endl;
-    }while(pom!="svi_proizvodi"&&pom!="spro"&&pom!="sp"&&
-           pom!="jedan_proizvod"&&pom!="jpro"&&pom!="jp"&&
-           pom!="svi_kupci"&&pom!="skup"&&pom!="kp"&&
+    }while(pom!="svi proizvodi"&&pom!="spro"&&pom!="sp"&&
+           pom!="jedan proizvod"&&pom!="jpro"&&pom!="jp"&&
+           pom!="svi kupci"&&pom!="skup"&&pom!="kp"&&
            pom!="kupci"&&pom!="kup"&&pom!="k");
 }
 void pregled_proizvoda_kupac(std::ostream &out, Korisnik k)
 {
-    log(k,"pregled_svih_proizvoda");
-    trenutno_jedan_proizvodi_izvjestaj_trgovac(out,k);
+    log(k,"pregl_s_proizv");
+    trenutno_svi_proizvodi_izvjestaj_trgovac(out,k);
 }
 void jedan_proizvod_kupac(std::ostream &out, Korisnik k)
 {
-    log(k,"pregled_jednog_proizvoda");
-    trenutno_svi_proizvodi_izvjestaj_trgovac(out,k);
+    log(k,"pregl_j_proizv");
+    trenutno_jedan_proizvodi_izvjestaj_trgovac(out,k);
 }
 /************************************************************************************************/
