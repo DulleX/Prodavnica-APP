@@ -78,6 +78,23 @@ bool isnotnumeric(std::string s)
 	}
 	return false;
 }
+bool isnotdouble(std::string s)
+{
+	bool dot = 0;
+	int i = 0;
+	while (s[i])
+	{
+		if (s[i] == '.')
+		{
+			if (dot)return true;
+			dot = true;
+		}
+		if ((s[i] < '0' || '9' < s[i]) && (s[i] != '.'))
+				return true;
+		++i;
+	}
+	return false;
+}
 /************************************************************************************************/
 /**ISPISI MENI**/
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2)

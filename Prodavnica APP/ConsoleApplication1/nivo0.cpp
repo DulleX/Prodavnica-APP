@@ -29,7 +29,7 @@ void program(std::string rep)
 		else if (pom == "ne" || pom == "n")
 		{
 			if (!za_nulti_logout)//OVO JE LOGOUT ZA SVE OSIM ZA POSLJEDNJI PUTA:
-				log(k, "--------------LOGOUT");
+				log(k, "-------------LOGOUT");
 			za_nulti_logout = false;
 			do
 			{
@@ -40,11 +40,11 @@ void program(std::string rep)
 					log(k, "nelegalna_prijava");
 				}
 			} while (k.get_sifra() == "-NEMA-");
-			log(k, "---------------LOGIN");
+			log(k, "--------------LOGIN");
 			glavni_meni(std::cout, k);
 		}
 		else if (pom == "kraj" || pom == "k")
-			log(k, "--------------LOGOUT");
+			log(k, "-------------LOGOUT");
 		else std::cout << "GERSKA U UNOSU!!!" << std::endl;
 	} while (pom != "kraj"&&pom != "k");
 }

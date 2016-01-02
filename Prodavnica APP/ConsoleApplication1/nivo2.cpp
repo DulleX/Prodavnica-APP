@@ -36,16 +36,22 @@ void nalozi_admin(std::ostream &out, Korisnik k)
 void definisanje_parametara_admin(std::ostream &out, Korisnik k)
 {
     log(k,"def_param");
-    print_meni("Definisanje parametara","lokacija baze podataka","","");
+    print_meni("Definisanje parametara","brisi log.txt","brisi proizvodi.txt","brisi korisnici.txt");
     std::string pom;
     do
     {
         std::cout<<">";
 		std::getline(std::cin, pom);
-        if(pom=="lokacija baze podataka"||pom=="lokacija bp"||pom=="lokbp"||pom=="lbp"||pom=="l")
-            lokacija_baze_podataka_definisanje_parametara_admin(out,k);
+		if (pom == "brisi log.txt" || pom == "blog" || pom == "bl" || pom == "l")
+			brisi_datoteku_definisanje_parametara_admin(out, k, "log.txt");
+		else if (pom == "brisi proizvodi.txt" || pom == "bpro" || pom == "bp" || pom == "p")
+			brisi_datoteku_definisanje_parametara_admin(out, k, "proizvodi.txt");
+		else if (pom == "brisi korisnici.txt" || pom == "bkor" || pom == "bk" || pom == "k")
+			brisi_datoteku_definisanje_parametara_admin(out, k, "korisnici.txt");
 		else std::cout << "GRESKA U UNOSU!!!" << std::endl;
-    }while(pom!="lokacija baze podataka"&&pom!="lokacija bp"&&pom!="lokbp"&&pom!="lbp"&&pom!="l");
+	} while (pom != "brisi log.txt"&&pom != "blog"&&pom != "bl"&&pom != "l"&&
+		pom != "brisi proizvodi.txt"&&pom != "bpro"&&pom != "bp"&&pom != "p"&&
+		pom != "brisi korisnici.txt"&&pom != "bkor"&&pom != "bk"&&pom != "k");
 }
 
 void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)

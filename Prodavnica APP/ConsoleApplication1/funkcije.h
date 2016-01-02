@@ -8,6 +8,7 @@ void print_naziv_menija(std::string s);
 void ispisi_vrijeme(std::ostream &out); //ova funkcija je malo teza za shvatiti posto koristi time.h biblioteku
 void log(Korisnik k, std::string s);
 bool isnotnumeric(std::string s);
+bool isnotdouble(std::string s);
 /************************************************************************************************/
 /**ISPISI MENI**/
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2);
@@ -53,7 +54,7 @@ void dodavanje_naloga_admin(std::ostream &, Korisnik);
 void brisanje_naloga_admin(std::ostream &, Korisnik);
 void izmjena_naloga_admin(std::ostream &, Korisnik);
 
-void lokacija_baze_podataka_definisanje_parametara_admin(std::ostream &, Korisnik);
+void brisi_datoteku_definisanje_parametara_admin(std::ostream &, Korisnik, std::string);
 
 void pregled_proizvoda_trgovac(std::ostream &, Korisnik);
 void dodavanje_proizvoda_trgovac(std::ostream &, Korisnik);

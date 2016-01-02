@@ -11,8 +11,11 @@ std::ostream &operator<<(std::ostream &out, const Korisnik &k)
 {
 	int w = 10;
 	int wsifre = 7;
-	out << "|" << std::setw(wsifre) << k.sifra << "|" << std::setw(w) << k.ime << "|" << std::setw(w) << k.prezime << "|"
-		<< std::setw(w) << k.korisnicko_ime << "|" << std::setw(w) << k.lozinka << "|" << std::setw(w) << k.zaduzenje << "|" << std::endl;
+	int wime = 14;
+	int wprezime = 13;
+	out << "|" << std::setw(wsifre) << k.sifra << "|" << std::setw(wime) << k.ime << "|" << std::setw(wprezime)
+		<< k.prezime << "|" << std::setw(w) << k.korisnicko_ime << "|" << std::setw(w) << k.lozinka << "|"
+		<< std::setw(w) << k.zaduzenje << "|" << std::endl;
 	return out;
 }
 /************************************************************************************************/
