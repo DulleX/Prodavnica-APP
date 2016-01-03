@@ -7,7 +7,7 @@ void statistika_admin(std::ostream &out, Korisnik k)
     log(k,"statistika");
 
 
-    print_meni("Statistika","aktivnosti","","");
+	print_meni("Statistika", "aktivnosti");
     std::string pom;
     do
     {
@@ -74,7 +74,7 @@ void upravljanje_proizvodima_trgovac(std::ostream &out, Korisnik k)
 void prodaja_trgovac(std::ostream &out, Korisnik k)
 {
     log(k,"prodaja");
-    print_meni("Prodaja","racun","","");
+	print_meni("Prodaja", "racun");
     std::string pom;
     do
     {

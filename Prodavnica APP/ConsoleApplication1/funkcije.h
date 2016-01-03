@@ -11,6 +11,7 @@ bool isnotnumeric(std::string s);
 bool isnotdouble(std::string s);
 /************************************************************************************************/
 /**ISPISI MENI**/
+void print_meni(std::string naziv_menija, std::string opcija1);
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2);
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2, std::string opcija3);
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2, std::string opcija3, std::string opcija4);

@@ -97,6 +97,11 @@ bool isnotdouble(std::string s)
 }
 /************************************************************************************************/
 /**ISPISI MENI**/
+void print_meni(std::string naziv_menija, std::string opcija1)
+{
+	print_naziv_menija(naziv_menija);
+	print_naziv_menija("(" + opcija1 + ")");
+}
 void print_meni(std::string naziv_menija, std::string opcija1, std::string opcija2)
 {
     print_naziv_menija(naziv_menija);

@@ -7,7 +7,9 @@ using namespace std;
 
 int main()
 {
+	system("color 0F");
 	string in = "korisnici.txt";
 	program(in);
+	getchar();
 	return 0;
 }

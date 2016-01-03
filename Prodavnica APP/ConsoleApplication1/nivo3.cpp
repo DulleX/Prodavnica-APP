@@ -5,6 +5,8 @@
 void aktivnosti_statistika_admin(std::ostream &out, Korisnik k)
 {
 	log(k, "aktivnosti");
+	print_naziv_menija("Aktivnosti");
+	print_line();
 	std::string instring = "log.txt";
 	std::ifstream in(instring, std::ifstream::in);
 	
@@ -34,6 +36,8 @@ void aktivnosti_statistika_admin(std::ostream &out, Korisnik k)
 void pregled_naloga_admin(std::ostream &out, Korisnik k)
 {
 	log(k, "pregled");
+	print_naziv_menija("Pregled naloga");
+	print_line();
 	std::string instring = "korisnici.txt";
 	std::ifstream in(instring, std::ifstream::in);
 
@@ -54,7 +58,9 @@ void pregled_naloga_admin(std::ostream &out, Korisnik k)
 }
 void dodavanje_naloga_admin(std::ostream &out, Korisnik k)
 {
-	log(k, "dodavanje"); 
+	log(k, "dodavanje");
+	print_naziv_menija("Dodavanje naloga");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 	std::ofstream o(streamstring, std::ofstream::app);
@@ -124,6 +130,8 @@ void dodavanje_naloga_admin(std::ostream &out, Korisnik k)
 void brisanje_naloga_admin(std::ostream &out, Korisnik k)
 {
 	log(k, "brisanje");
+	print_naziv_menija("Brisanje naloga");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -170,6 +178,8 @@ void brisanje_naloga_admin(std::ostream &out, Korisnik k)
 void izmjena_naloga_admin(std::ostream &out, Korisnik k) 
 {
 	log(k, "izmjena");
+	print_naziv_menija("Izmjena naloga");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -247,10 +257,14 @@ void brisi_datoteku_definisanje_parametara_admin(std::ostream &out, Korisnik k, 
 	if (s == "log.txt")log(k, "br_dat_log");
 	else if (s == "proizvodi.txt")log(k, "br_dat_pro");
 	else if (s == "korisnici.txt")log(k, "br_dat_kor");
+	print_naziv_menija("Brisanje datoteke");
+	print_line();
 }
 void pregled_proizvoda_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "pregled");
+	print_naziv_menija("Pregled proizvoda");
+	print_line();
 	std::string instring = "proizvodi.txt";
 	std::ifstream in(instring, std::ifstream::in);
 
@@ -272,6 +286,8 @@ void pregled_proizvoda_trgovac(std::ostream &out, Korisnik k)
 void dodavanje_proizvoda_trgovac(std::ostream &out, Korisnik k)
 { 
 	log(k, "dodavanje");
+	print_naziv_menija("Dodavanje proizvoda");
+	print_line();
 	std::string streamstring = "proizvodi.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 	std::ofstream o(streamstring, std::ofstream::app);
@@ -334,6 +350,8 @@ void dodavanje_proizvoda_trgovac(std::ostream &out, Korisnik k)
 void brisanje_proizvoda_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "brisanje");
+	print_naziv_menija("Brisanje proizvoda");
+	print_line();
 	std::string streamstring = "proizvodi.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -377,6 +395,8 @@ void brisanje_proizvoda_trgovac(std::ostream &out, Korisnik k)
 void izmjena_proizvoda_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "izmjena");
+	print_naziv_menija("Izmjena proizvoda");
+	print_line();
 	std::string streamstring = "proizvodi.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -452,6 +472,8 @@ void izmjena_proizvoda_trgovac(std::ostream &out, Korisnik k)
 void racun_prodaja_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "racun");
+	print_naziv_menija("Izdavanje racuna");
+	print_line();
 	std::string streamstring = "proizvodi.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -537,6 +559,8 @@ void racun_prodaja_trgovac(std::ostream &out, Korisnik k)
 void pregled_kupaca_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "pregled");
+	print_naziv_menija("Pregled kupaca");
+	print_line();
 	std::string instring = "korisnici.txt";
 	std::ifstream in(instring, std::ifstream::in);
 
@@ -558,6 +582,8 @@ void pregled_kupaca_trgovac(std::ostream &out, Korisnik k)
 void dodavanje_kupaca_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "dodavanje");
+	print_naziv_menija("Dodavanje kupca");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 	std::ofstream o(streamstring, std::ofstream::app);
@@ -617,6 +643,8 @@ void dodavanje_kupaca_trgovac(std::ostream &out, Korisnik k)
 void brisanje_kupaca_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "brisanje");
+	print_naziv_menija("Brisanje kupca");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
@@ -664,6 +692,8 @@ void brisanje_kupaca_trgovac(std::ostream &out, Korisnik k)
 void izmjena_kupaca_trgovac(std::ostream &out, Korisnik k)
 {
 	log(k, "izmjena");
+	print_naziv_menija("Izmjena kupca");
+	print_line();
 	std::string streamstring = "korisnici.txt";
 	std::ifstream i(streamstring, std::ifstream::in);
 
